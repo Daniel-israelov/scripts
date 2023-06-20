@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Define the root directory to search for subfolders
-root_dir="<FULL/PATH/TO/MAIN/GIT/PROJECTS/DIRECTORY>"
+echo "Enter full path to folder:"
+read full_path
+root_dir=$full_path
 
 # Find all subfolders in the root directory and loop through them
 find "${root_dir}" -mindepth 1 -maxdepth 1 -type d | while read folder
